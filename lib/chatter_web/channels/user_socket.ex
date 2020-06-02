@@ -4,7 +4,7 @@ defmodule ChatterWeb.UserSocket do
   ## Channels
   # channel "room:*", ChatterWeb.RoomChannel
 
-  channel "talk:*", ChatterWeb.RoomChannel
+  channel "talk:*", ChatterWeb.TalkChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
