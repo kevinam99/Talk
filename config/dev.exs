@@ -16,7 +16,13 @@ config :chatter, Chatter.Repo,
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :chatter, ChatterWeb.Endpoint,
-  http: [port: 4000],
+  # http: [port: 4000],
+  https: [
+    port: 4001,
+    cipher_suite: :strong,
+    keyfile: "priv/cert/selfsigned_key.pem",
+    certfile: "priv/cert/selfsigned.pem"
+  ],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -43,12 +49,12 @@ config :chatter, ChatterWeb.Endpoint,
 #
 # The `http:` config above can be replaced with:
 #
-#     https: [
-#       port: 4001,
-#       cipher_suite: :strong,
-#       keyfile: "priv/cert/selfsigned_key.pem",
-#       certfile: "priv/cert/selfsigned.pem"
-#     ],
+    # https: [
+    #   port: 4001,
+    #   cipher_suite: :strong,
+    #   keyfile: "priv/cert/selfsigned_key.pem",
+    #   certfile: "priv/cert/selfsigned.pem"
+    # ],
 #
 # If desired, both `http:` and `https:` keys can be
 # configured to run both http and https servers on

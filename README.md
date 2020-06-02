@@ -1,6 +1,14 @@
 # Chatter
 
-To start your Phoenix server:
+Chatter is a robust web chat application backed by the scalability and fault tolerance provided by Elixir. For now, Chatter supports only group chats and text messages. 
+
+## Stack
+- Elixir
+- Phoenix
+- HTML, CSS, JavaScript
+- Postgres DB
+
+### To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
@@ -9,12 +17,9 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+### To do:
+1. Revamp UI.
+2. Add user authentication.
+3. Add timestamp to messages.
+4. Extend application to one-to-one chats.
+5. Add support for multimedia messages (images, videos)
