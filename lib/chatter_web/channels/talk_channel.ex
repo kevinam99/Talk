@@ -1,6 +1,8 @@
 defmodule ChatterWeb.TalkChannel do
   use ChatterWeb, :channel
 
+  alias Chatter.Chats
+
   @impl true
   def join("talk:lobby", _payload, socket) do
     # if authorized?(payload) do
@@ -16,6 +18,7 @@ defmodule ChatterWeb.TalkChannel do
   # broadcast to everyone in the current topic (talk:lobby).
   @impl true
   def handle_in("shout", payload, socket) do
+	Chats.create_message(payload)
     broadcast socket, "shout", payload
     {:noreply, socket}
   end

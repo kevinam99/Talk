@@ -1,6 +1,8 @@
 <h2>Talk!</h2>
 <div id="chat-box">
-
+  <%= for message <- @messages do %>
+    <p><b><%= message.name %>:</b> <%= message.body %></p>
+  <% end %>
 </div>
 
 <form id="chat-form">
