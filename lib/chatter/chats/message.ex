@@ -14,5 +14,6 @@ defmodule Chatter.Chats.Message do
     message
     |> cast(attrs, [:name, :body])
     |> validate_required([:name, :body])
+    |> validate_length(:body, min: 2)
   end
 end

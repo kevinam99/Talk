@@ -12,9 +12,15 @@ let talk = {
             let username = document.getElementById('user-name').value
             let userMsg = document.getElementById('user-msg').value
 
-            channel.push('shout', {name: username, body: userMsg})
-            
-            userMsg = ''
+            if(userMsg == ''){
+                document.getElementById('empty-text').innerHTML = "Min length of message has to be 2 chars."
+            }
+
+            else {
+                channel.push('shout', {name: username, body: userMsg})
+                document.getElementById('empty-text').innerHTML = ""
+                document.getElementById('user-msg').value = ''
+            }
         })
     
         channel.on('shout', payload => {

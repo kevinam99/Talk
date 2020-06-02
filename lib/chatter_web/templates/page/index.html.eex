@@ -7,6 +7,8 @@
 
 <form id="chat-form">
   <input type="text" placeholder="Username" id="user-name">
-  <textarea placeholder="Your comment" id="user-msg"></textarea>
+  <textarea placeholder="Your message" id="user-msg"></textarea>
+  <div id = "empty-text" style = "color: red"></div>
   <button type="submit">Post</button>
+
 </form>
