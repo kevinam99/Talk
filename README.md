@@ -1,6 +1,6 @@
-# Chatter
+# Talk
 
-Chatter is a robust web chat application backed by the scalability and fault tolerance provided by Elixir. For now, Chatter supports only group chats and text messages. 
+Talk is a robust web chat application backed by the scalability and fault tolerance provided by Elixir. For now, Chatter supports only group chats and text messages. 
 
 ## Stack
 - Elixir
